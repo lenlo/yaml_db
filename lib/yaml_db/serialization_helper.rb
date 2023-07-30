@@ -126,7 +126,7 @@ module YamlDb
       end
 
       def self.convert_boolean(value)
-        ['t', '1', true, 1].include?(value)
+        value == nil ? nil : ['t', '1', true, 1].include?(value)
       end
 
       def self.boolean_columns(table)
